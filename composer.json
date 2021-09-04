@@ -17,7 +17,9 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "illuminate/support": "^8.0"
+        "illuminate/support": "^8.0",
+        "illuminate/view": "^8.0",
+        "illuminate/contract": "^8.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
@@ -25,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mawuekom\\CustomViewComponents\\": "src"
+            "Mawuekom\\Customponents\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mawuekom\\CustomViewComponents\\Tests\\": "tests"
+            "Mawuekom\\Customponents\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mawuekom\\CustomViewComponents\\CustomViewComponentsServiceProvider"
+                "Mawuekom\\Customponents\\CustomponentsServiceProvider"
             ],
             "aliases": {
-                "CustomViewComponents": "Mawuekom\\CustomViewComponents\\CustomViewComponentsFacade"
+                "Customponents": "Mawuekom\\Customponents\\CustomponentsFacade"
             }
         }
     }

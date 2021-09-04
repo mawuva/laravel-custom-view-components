@@ -1,13 +1,13 @@
 <?php
 
-namespace Mawuekom\CustomViewComponents;
+namespace Mawuekom\Customponents;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Mawuekom\CustomViewComponents\Skeleton\SkeletonClass
+ * @see \Mawuekom\Customponents\Skeleton\SkeletonClass
  */
-class CustomViewComponentsFacade extends Facade
+class CustomponentsFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class CustomViewComponentsFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-custom-view-components';
+        return 'customponents';
     }
 }
