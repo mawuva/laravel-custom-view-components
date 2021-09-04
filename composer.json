@@ -2,7 +2,7 @@
     "name": "mawuekom/laravel-custom-view-components",
     "description": "A bunch of commons view components you usually use in your laravel project",
     "keywords": [
-        "mawuekom",
+        "mawuekom", "laravel", "view-components",
         "laravel-custom-view-components"
     ],
     "homepage": "https://github.com/mawuekom/laravel-custom-view-components",
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mawuekom\\LaravelCustomViewComponents\\": "src"
+            "Mawuekom\\CustomViewComponents\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mawuekom\\LaravelCustomViewComponents\\Tests\\": "tests"
+            "Mawuekom\\CustomViewComponents\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mawuekom\\LaravelCustomViewComponents\\LaravelCustomViewComponentsServiceProvider"
+                "Mawuekom\\CustomViewComponents\\CustomViewComponentsServiceProvider"
             ],
             "aliases": {
-                "LaravelCustomViewComponents": "Mawuekom\\LaravelCustomViewComponents\\LaravelCustomViewComponentsFacade"
+                "CustomViewComponents": "Mawuekom\\CustomViewComponents\\CustomViewComponentsFacade"
             }
         }
     }
