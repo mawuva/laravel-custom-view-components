@@ -54,7 +54,18 @@ return [
      * App Name should be set here
      */
 
-    'app_name' => env('APP_NAME', 'My Laravel Project')
+    'app_name' => env('APP_NAME', 'My Laravel Project'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Bunch of features to enable or disable.
+    |--------------------------------------------------------------------------
+    */
+
+    'enable' => [
+        'app_style_sheet'   => true,
+        'app_script'        => true,
+    ],
 ];
 ```
 
@@ -116,9 +127,7 @@ So to include assets links in your webpage, just do it like that
 <div>
     <h1>My Laravel Website</h1>
     <hr>
-    <p>
-        Some content here
-    </p>
+    <p> Some content here </p>
 </div>
 
 <x-customponents::partials.footers>
@@ -148,9 +157,7 @@ Then, your page could look like that...
 <div>
     <h1>My Laravel Website</h1>
     <hr>
-    <p>
-        Some content here
-    </p>
+    <p> Some content here </p>
 </div>
 
 <x-customponents::partials.footers>
@@ -158,6 +165,30 @@ Then, your page could look like that...
         <x-customponents::resources.assets type="js" path="js/app.js" />
     </x-customponents-section>
 </x-customponents::partials.footers>
+```
+
+#### Layout
+
+There is a [master.blade.php](https://github.com/mawuva/laravel-custom-view-components/blob/main/resources/views/components/layouts/master.blade.php) layout that can simplify your `welcome.blade.php` : 
+
+```php
+<x-customponents::layouts.master title="Page Title" description="Page Description" section="">
+
+    <x-customponents-section name="lyt_master_styles">
+        // Your style sheet goes here.
+    </x-customponents-section>
+
+    <div>
+        <h1>My Laravel Website</h1>
+        <hr>
+        <p> Some content here </p>
+    </div>
+
+    <x-customponents-section name="lyt_master_scripts">
+        // Your script files goes here.
+    </x-customponents-section>
+
+</x-customponents::layouts.master>
 ```
 
 ### Enjoy 🙂😉👌🔥
