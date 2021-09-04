@@ -1,1 +1,4 @@
-footers
+
+        @yield('scripts')
+    </body>
+</html>
