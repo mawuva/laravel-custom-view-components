@@ -3,7 +3,7 @@
 namespace Mawuekom\Customponents;
 
 use Illuminate\Support\ServiceProvider;
-use Mawuekom\Customponents\View\Components\Partials\Headers;
+use Mawuekom\Customponents\View\Components\Section;
 
 class CustomponentsServiceProvider extends ServiceProvider
 {
@@ -21,6 +21,10 @@ class CustomponentsServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'customponents');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
+
+        $this->loadViewComponentsAs('customponents', [
+            Section::class,
+        ]);
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
