@@ -16,13 +16,9 @@ class CustomponentsServiceProvider extends ServiceProvider
          * Optional methods to load your package assets
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'customponents');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'customponents');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'customponents');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
-
-        $this->loadViewComponentsAs('customponents', [
-            Headers::class,
-        ]);
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
