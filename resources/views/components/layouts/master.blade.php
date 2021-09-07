@@ -1,4 +1,4 @@
-<x-customponents::partials.headers title="Home" description="Description" section="">
+<x-customponents::partials.headers title="{{ $title ?? '' }}" description="{{ $description ?? '' }}" section="{{ $section ?? '' }}">
     <x-customponents-section name="styles">
         @if (config('customponents.enable.app_style_sheet'))
             <x-customponents::resources.assets type="css" path="{{ asset('css/app.css') }}" />
