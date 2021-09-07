@@ -31,13 +31,13 @@ Once install, go to `config/app.php` to add `CustomponentsServiceProvider` in pr
 - #### Publish Assets
 
 ```bash
-php artisan vendor:publish --tag=customponents
+php artisan vendor:publish --provider="Mawuekom\Customponents\CustomponentsServiceProvider"
 ```
 
 Or you can publish config
 
 ```bash
-php artisan vendor:publish --tag=customponents --config
+php artisan vendor:publish --provider="Mawuekom\Customponents\CustomponentsServiceProvider" --tag="config"
 ```
 
 #### Configuration
